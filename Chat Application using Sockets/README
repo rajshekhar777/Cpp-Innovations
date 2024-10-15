@@ -1,0 +1,36 @@
+# Chat Application using Sockets
+
+## Description
+This project implements a client-server chat application using TCP/IP sockets in C++. The server supports multiple clients using multithreading, and communication between the client and server is encrypted using OpenSSL.
+
+## Features
+- **Multithreaded Server**: The server can handle multiple clients simultaneously.
+- **Encrypted Communication**: Messages exchanged between the client and server are encrypted using SSL/TLS.
+- **Cross-Platform**: Works on Linux-based systems.
+
+## Prerequisites
+- **OpenSSL** installed on your system.
+- A **C++ compiler** supporting C++11 or newer (e.g., g++).
+- Certificates: `server.crt` and `server.key` for SSL/TLS encryption.
+
+## Installation Instructions
+1. Install OpenSSL if not already installed:
+   ```bash
+   sudo apt-get install libssl-dev
+
+2. Generate SSL certificates (self-signed)
+    openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout server.key -out server.crt
+
+# Compilation Instructions
+To compile both the server and client programs, use the following commands:
+
+    g++ server.cpp -o server -lssl -lcrypto -pthread
+    g++ client.cpp -o client -lssl -lcrypto
+
+# ** Running the Application
+
+# Start the server on port 4444:
+./server
+
+# Start the client to connect to the server:
+./client
