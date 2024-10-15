@@ -1,3 +1,7 @@
+
+![GitHub stars](https://img.shields.io/github/stars/rajshekhar777/Projects)
+![GitHub issues](https://img.shields.io/github/issues/rajshekhar777/Projects)
+
 Planned projects :-
 
 1.  Multithreaded-Web-Server
